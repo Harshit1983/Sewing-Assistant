@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Sewing Assistant - Your Personal Sewing Guide">
+    <title>AI Sewing Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="lpulogo.jpg" alt="LPU Logo" class="lpu-logo">
+            </div>
+            <div class="header-center">
+                <h1><i class="fas fa-scissors"></i> AI Sewing Assistant</h1>
+            </div>
+            <div class="header-right">
+                <div class="student-info">
+                    <p>Name: Harshit Pandiyar</p>
+                    <p>Registration No: 12310755</p>
+                    <p>Roll No: 03</p>
+                </div>
+            </div>
+            <button id="historyButton" class="history-button">
+                <i class="fas fa-history"></i> Chat History
+            </button>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message assistant">
+                        <div class="avatar"><i class="fas fa-robot"></i></div>
+                        <div class="content">
+                            Hello! I'm your AI Sewing Assistant. I can help you with:
+                            <ul>
+                                <li>Sewing machine recommendations</li>
+                                <li>Basic sewing techniques</li>
+                                <li>Troubleshooting common issues</li>
+                                <li>Pattern and fabric advice</li>
+                            </ul>
+                            What would you like help with today?
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Type your sewing question here..." aria-label="Your message">
+                    <button id="send-button" class="primary-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <button class="action-button" data-query="Can you recommend a sewing machine for beginners?">
+                        <i class="fas fa-star"></i> Machine Recommendations
+                    </button>
+                    <button class="action-button" data-query="What are the basic sewing techniques I should know?">
+                        <i class="fas fa-book"></i> Basic Techniques
+                    </button>
+                    <button class="action-button" data-query="Help me troubleshoot common sewing problems">
+                        <i class="fas fa-wrench"></i> Troubleshooting
+                    </button>
+                    <button class="action-button" data-query="What should I know about different fabric types?">
+                        <i class="fas fa-scroll"></i> Fabric Guide
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat History Modal -->
+        <div id="historyModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Chat History</h2>
+                    <button id="closeHistory" class="close-button">&times;</button>
+                </div>
+                <div id="chatHistory" class="chat-history"></div>
+                <button id="clearHistory" class="clear-history">Clear History</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
